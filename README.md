@@ -4,7 +4,7 @@ kafka学习项目
 
 ### 启动kafka
 ```bash
-docker compose -f kafka-dockercompose.yml up -d
+docker compose -f kafka-kafka-docker-compose.yml up -d
 ```
 
 ### 笔记目录：
