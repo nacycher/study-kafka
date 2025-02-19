@@ -4,3 +4,7 @@
 - 每个broker上都有备份，在当前broker挂掉后，其他broker可以继续提供服务
 - zk负责kafka的注册中心，broker选举。kafka自带有kraft注册中心，但现在主流还是用zk
 ![](./images/kafka-02-01.png)
+
+### kafka集群写消息
+当kafka写消息时会尽量的将消息(消息大小)均匀的分布到partition上
+![](./images/kafka-02-02.png)

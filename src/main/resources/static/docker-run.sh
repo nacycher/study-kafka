@@ -20,7 +20,7 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello
 kafka-console-producer.sh --broker-list localhost:9092 --topic hello
 
 # 验证kafka集群是否启动成功
-docker exec -it kafka1 kafka-topics.sh \
+
 --create --topic test-topic --bootstrap-server kafka1:9092 \
 --replication-factor 3 --partitions 1
 
