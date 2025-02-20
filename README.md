@@ -2,9 +2,9 @@
 study kafka
 kafka学习项目
 
-### 启动kafka
+### 启动kafka集群
 ```bash
-docker compose -f kafka-kafka-docker-compose.yml up -d
+docker compose -f kafka-cluster-docker-compose.yml up -d
 ```
 
 ### 笔记目录：

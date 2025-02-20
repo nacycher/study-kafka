@@ -38,7 +38,7 @@ public class KafkaProducerTest {
             ProducerRecord<String, String> producerRecord = new ProducerRecord<String, String>(TOPIC, message); // 创建要发送的消息记录
             kafkaProducer.send(producerRecord); // 发送消息到主题
             System.out.printf("发送消息“%s”\n", message); // 打印发送的消息内容
-            Thread.sleep((long) Math.floor(d * 1000)); // 根据生成的间隔时间进行等待
+            Thread.sleep((long) Math.floor(d * 100)); // 根据生成的间隔时间进行等待
         }
         // 关闭消息生产者对象
         kafkaProducer.close();

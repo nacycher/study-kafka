@@ -32,6 +32,7 @@ public class KafkaConsumerTest {
                 double num = Double.parseDouble(cr.value());
                 sum_num += num;
                 System.out.printf("当前偏移量为：%d，num：%.3f,sum num：%.3f\n", cr.offset(), num, sum_num);
+                // 提交消费的偏移量
                 kafkaConsumer.commitSync();
             }
         }
