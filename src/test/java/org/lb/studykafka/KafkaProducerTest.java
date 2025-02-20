@@ -24,7 +24,7 @@ public class KafkaProducerTest {
         Properties props = new Properties(); // 创建用于配置生产者的属性对象
 
         // 设置连接到Kafka集群所需的属性
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.121.142:9091,192.168.121.142:9093,192.168.121.142:9094"); // 指定Kafka集群地址
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.121.190:9092,192.168.121.190:9093,192.168.121.190:9094"); // 指定Kafka集群地址
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer"); // 指定键的序列化器
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer"); // 指定值的序列化器
         props.put(ProducerConfig.ACKS_CONFIG, "0"); // 设置消息确认级别为0（不等待任何确认）

@@ -17,11 +17,10 @@ services:
     ports:
       - "9092:9092"
     environment:
-      KAFKA_BROKER_ID: 0
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-    restart: always
+      KAFKA_BROKER_ID: 1
+      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
+      ALLOW_PLAINTEXT_LISTENER: yes
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://192.168.121.190:9092 # 这里放当前服务器主机地址
     networks:
       - cloud
     depends_on:
